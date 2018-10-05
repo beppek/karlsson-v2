@@ -1,18 +1,18 @@
-import React from "react";
-import Helmet from "react-helmet";
-import config from "../../data/SiteConfig";
-import "./index.css";
+import React, { Fragment } from 'react';
+import HTMLHead from './HTMLHead';
+import Nav from '../components/Nav';
+
+import './index.css';
 
 export default class MainLayout extends React.Component {
   render() {
-    const { children } = this.props;
+    const { children, pageTitle } = this.props;
     return (
-      <div>
-        <Helmet>
-          <meta name="description" content={config.siteDescription} />
-        </Helmet>
+      <Fragment>
+        <HTMLHead pageTitle={pageTitle} />
+        <Nav />
         {children}
-      </div>
+      </Fragment>
     );
   }
 }

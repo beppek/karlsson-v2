@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-import { Follow } from "react-twitter-widgets";
+import React, { Component } from 'react';
+import { Follow } from 'react-twitter-widgets';
+import config from '../../../data/SiteConfig';
 
 class UserInfo extends Component {
   render() {
-    const { userTwitter } = this.props.config;
+    const { userTwitter } = config;
     const { expanded } = this.props;
     return (
       <Follow
         username={userTwitter}
-        options={{ count: expanded ? true : "none" }}
+        options={{ count: expanded ? true : 'none' }}
       />
     );
   }
