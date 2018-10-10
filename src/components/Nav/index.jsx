@@ -1,15 +1,33 @@
 import React from 'react';
-// import { Link } from 'gatsby';
-import Wrapper from '../../commons/Wrapper';
 
-import MenuItem from './MenuItem';
+import InnerWrapper from './InnerWrapper';
 
-const Nav = () => (
-  <Wrapper>
-    <MenuItem to="/">Home</MenuItem>
-    <MenuItem to="/about">About</MenuItem>
-    <MenuItem to="/blog">Blog</MenuItem>
-  </Wrapper>
-);
+import NavBar from './NavBar';
+import NavItem from './NavItem';
+
+const PATHS = {
+  home: '/',
+  blog: '/blog',
+  about: '/about'
+};
+
+const Nav = () => {
+  const path = window.location.pathname;
+  return (
+    <NavBar>
+      <InnerWrapper>
+        <NavItem selected={path === PATHS.home} to={PATHS.home}>
+          Home
+        </NavItem>
+        <NavItem selected={path.includes(PATHS.blog)} to={PATHS.blog}>
+          Blog
+        </NavItem>
+        <NavItem selected={path.includes(PATHS.about)} to={PATHS.about}>
+          About
+        </NavItem>
+      </InnerWrapper>
+    </NavBar>
+  );
+};
 
 export default Nav;
