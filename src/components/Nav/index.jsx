@@ -12,7 +12,10 @@ const PATHS = {
 };
 
 const Nav = () => {
-  const path = window.location.pathname;
+  let path = '';
+  if (window) {
+    path = window.location.pathname;
+  }
   return (
     <NavBar>
       <InnerWrapper>
