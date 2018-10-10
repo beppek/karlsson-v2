@@ -13,7 +13,7 @@ const PATHS = {
 
 const Nav = () => {
   let path = '';
-  if (window !== undefined) {
+  if (typeof window !== 'undefined') {
     path = window.location.pathname;
   }
   return (
