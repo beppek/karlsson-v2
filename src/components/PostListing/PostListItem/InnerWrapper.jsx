@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { colors } from '../../../constants/colors';
 
 export default styled.div`
-  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.2), 1px 2px 20px 0 rgba(0, 0, 0, 0.19);
   height: ${props => (props.height ? props.height : 'auto')};
   width: ${props => (props.width ? props.width : 'none')};
   top: ${props => (props.top ? props.top : 'auto')};
@@ -16,13 +15,15 @@ export default styled.div`
   background-color: ${colors.background};
   z-index: 1;
   position: relative;
+  border: solid 1px ${colors.inactive};
 
   /* &::after {
   } */
 
   &:hover {
-    box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.16),
-      3px 4px 25px 2px rgba(0, 0, 0, 0.18);
+    border-color: ${colors.hover};
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.16),
+      1px 1px 15px 0 rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease-in-out;
     transform: scale(1.005, 1.005);
   }
