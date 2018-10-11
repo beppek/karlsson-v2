@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../../layout';
-import PostListing from '../../components/PostListing/PostListing';
+import PostListing from '../../components/PostListing';
 import SEO from '../../components/SEO/SEO';
 
 class Index extends React.Component {
