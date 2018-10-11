@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-
-const inactiveColor = '#A8A6A6';
-const activeColor = '#0282B3';
-const hoverColor = '#06A5E2';
+import { colors } from '../../constants/colors';
 
 const borderStyle = 'solid 2px';
 const hoverBorderStyle = 'solid 3px';
@@ -15,10 +12,10 @@ const NavItem = styled(Link)`
   height: ${props => (props.height ? props.height : '50px')};
   line-height: ${props => (props.height ? props.height : '50px')};
   text-decoration: none;
-  color: ${props => (props.selected ? activeColor : inactiveColor)};
+  color: ${props => (props.selected ? colors.active : colors.inactive)};
   border-bottom: ${props => (props.selected ? activeBorderStyle : borderStyle)};
   border-bottom-color: ${props =>
-    props.selected ? activeColor : inactiveColor};
+    props.selected ? colors.active : colors.inactive};
   width: 100px;
   transition: border-bottom 300ms ease-in-out;
 
@@ -29,7 +26,7 @@ const NavItem = styled(Link)`
   &:hover {
     border-bottom: ${props =>
       props.selected ? activeBorderStyle : hoverBorderStyle};
-    border-bottom-color: ${hoverColor};
+    border-bottom-color: ${colors.hover};
   }
 `;
 
