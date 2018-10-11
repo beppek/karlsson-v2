@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import PostListItem from './PostListItem';
+
+import FlexBox from '../../commons/FlexBox';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -20,14 +22,11 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div>
-        {/* Your post list here. */
-        postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
+      <FlexBox justify="center" wrap>
+        {postList.map(post => (
+          <PostListItem post={post} />
         ))}
-      </div>
+      </FlexBox>
     );
   }
 }
