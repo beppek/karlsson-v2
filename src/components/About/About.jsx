@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import FlexBox from '../../commons/FlexBox';
+import Wrapper from '../../commons/Wrapper';
+import Image from '../../commons/Image';
+import Title, { Subtitle } from '../../commons/Title';
 
 class About extends Component {
   render() {
     return (
-      <div className="about">
-        <h1>
-          Edit About component or pages/about.jsx to include your information.
-        </h1>
-      </div>
+      <Wrapper>
+        <FlexBox justify="center" align="center">
+          <Image rounded width="150px" src="/img/beppe_drinking_horn.jpeg" />
+        </FlexBox>
+        <Title>Max Karlsson</Title>
+        <Subtitle>Developer | Futurist</Subtitle>
+      </Wrapper>
     );
   }
 }
