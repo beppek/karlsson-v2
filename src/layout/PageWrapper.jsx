@@ -6,9 +6,9 @@ const PageWrapper = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-top: 10px;
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 160px);
   color: ${colors.text};
 `;
 
