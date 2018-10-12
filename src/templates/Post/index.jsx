@@ -7,7 +7,7 @@ import Layout from '../../layout';
 import UserInfo from '../../components/UserInfo/UserInfo';
 import Disqus from '../../components/Disqus/Disqus';
 import SEO from '../../components/SEO/SEO';
-import Wrapper from '../../commons/Wrapper';
+import FlexBox from '../../commons/FlexBox';
 
 import PostHeader from './PostHeader';
 import PostContent from './PostContent';
@@ -36,13 +36,13 @@ const PostTemplate = ({ pageContext, data }) => {
         <title>{`${post.title} | ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postPath={slug} postNode={postNode} postSEO />
-      <Wrapper width="100%">
+      <FlexBox wrap="wrap" width="100%">
         <PostHeader post={post} />
         <PostContent html={postNode.html} />
         <PostMeta slug={slug} post={post} postNode={postNode} />
         <UserInfo config={config} />
         <Disqus postNode={postNode} />
-      </Wrapper>
+      </FlexBox>
     </Layout>
   );
 };

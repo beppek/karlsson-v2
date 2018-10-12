@@ -1,5 +1,10 @@
 import React from 'react';
+import Wrapper from './Wrapper';
 
-const PostContent = ({ html }) => <div dangerouslySetInnerHTML={{ __html: html }} />;
+const PostContent = ({ html }) => (
+  <Wrapper>
+    <div dangerouslySetInnerHTML={{ __html: html }} />
+  </Wrapper>
+);
 
 export default PostContent;
