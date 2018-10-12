@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { colors } from '../../constants/colors';
 
 const NavBar = styled.div`
-  position: absolute;
+  position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
-  width: 100%;
-  height: ${props => (props.height ? props.height : '60px')};
+  right: calc((100% - 100vw) + 10px);
+  height: ${props => (props.height ? props.height : '49px')};
   text-align: center;
   background-color: ${colors.background};
 `;

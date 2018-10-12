@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { colors } from '../../constants/colors';
 
-const borderStyle = 'solid 2px';
-const hoverBorderStyle = 'solid 3px';
-const activeBorderStyle = 'solid 4px';
+const borderStyle = 'solid 1px';
+const hoverBorderStyle = 'solid 2px';
+const activeBorderStyle = 'solid 2px';
 
 const NavItem = styled(Link)`
   display: inline-block;
