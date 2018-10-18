@@ -41,7 +41,7 @@ const PostTemplate = ({ pageContext, data }) => {
         <PostContent html={postNode.html} />
         <PostMeta slug={slug} post={post} postNode={postNode} />
         <UserInfo config={config} />
-        <Disqus postNode={postNode} />
+        {/* <Disqus postNode={postNode} /> */}
       </FlexBox>
     </Layout>
   );
