@@ -1,14 +1,15 @@
-import React, { Component } from "react";
-import "./UserLinks.css";
+import React, { Component } from 'react';
+import Link from './Link';
+import './UserLinks.css';
 
 class UserLinks extends Component {
   getLinkElements() {
     const { userLinks } = this.props.config;
     const { labeled } = this.props;
     return userLinks.map(link => (
-      <button key={link.label} href={link.url}>
-        {labeled ? link.label : ""}
-      </button>
+      <Link key={link.label} href={link.url}>
+        {labeled ? link.label : ''}
+      </Link>
     ));
   }
   render() {
